@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container result-container">
+
+        <h1>Loan Prediction Result</h1>
+
+        {% if status == "Approved" %}
+            <div class="result-approved">
+                <h2>Loan Approved!</h2>
+                <p>
+                    The model predicts that this loan application
+                    is likely to be approved.
+                </p>
+            </div>
+        {% else %}
+            <div class="result-rejected">
+                <h2>Loan Rejected!</h2>
+                <p>
+                    The model predicts that this loan application
+                    is likely to be rejected.
+                </p>
+            </div>
+        {% endif %}
+
+        <p class="disclaimer">
+            This is a machine learning prediction for academic
+            demonstration, not an actual financial or lending decision.
+        </p>
+
+        <div class="result-links">
+            <a href="{{ url_for('predict') }}" class="result-button">
+                Try Another Prediction
+            </a>
+
+            <a href="{{ url_for('home') }}" class="home-link">
+                Back to Home
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>

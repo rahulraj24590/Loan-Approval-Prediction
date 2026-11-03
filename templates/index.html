@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">LoanPredict</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/predict">Predict Loan</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Smart Loan Approval Prediction</h1>
+
+            <p>
+                Predict loan approval outcomes using Machine Learning.
+                Our system uses a Random Forest model to analyze
+                applicant information and generate predictions.
+            </p>
+
+            <a href="/predict" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>About Our Project</h2>
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+                <h3>Machine Learning</h3>
+                <p>Powered by a trained Random Forest classification model.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Smart Prediction</h3>
+                <p>Analyze applicant details to predict loan approval status.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>MongoDB Database</h3>
+                <p>Store and manage applicant prediction records using MongoDB.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Loan Approval Prediction | CSE494 Project</p>
+    </footer>
+
+</body>
+</html>
